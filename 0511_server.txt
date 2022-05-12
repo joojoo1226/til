@@ -1,0 +1,144 @@
+[cos]
+rpm -qa maria*
+yum install -y maria mariadb-server
+
+[cos-c]
+rpm -qa maria*
+yum install -y maria mariadb-server
+
+[cos]
+systemctl stop firewalld
+systemctl disable firewalld
+
+[cos-c]
+systemctl stop firewalld
+systemctl disable firewalld
+
+[cos]
+vi /etc/selinux/config 
+:set nu
+line7)
+SELINUX=disabled
+line12)
+# (주석처리)
+esc :wq
+
+[cos-c]
+echo SELINUX=disabled
+echo SELINUX=disabled > /etc/selinux/config
+cat /etc/selinux/config
+
+[cos]
+systemctl start mariadb
+systemctl enable mariadb
+mysql_secure_installation
+엔터
+y
+1111
+1111
+y
+y
+y
+y
+
+[cos-c]
+systemctl start mariadb
+systemctl enable mariadb
+mysql_secure_installation
+엔터
+y
+1111
+1111
+y
+y
+y
+y
+
+[cos]
+cp /usr/share/mysql/my-small.cnf /etc/my.cnf
+y
+vi /etc/my.cnf
+:set nu
+(line 22)
+default-character-set = utf8
+(line 29 밑에 한줄 생성해서)
+skip-name-resolve
+(또 엔터)
+character-set-server = utf8
+esc :wq
+systemctl restart mariadb
+
+[cos-c]
+cp /usr/share/mysql/my-small.cnf /etc/my.cnf
+y
+vi /etc/my.cnf
+:set nu
+(line 22)
+default-character-set = utf8
+(line 29 밑에 한줄 생성해서)
+skip-name-resolve
+(또 엔터)
+character-set-server = utf8
+esc :wq
+systemctl restart mariadb
+
+[cos]
+vi /etc/my.cnf
+:set nu
+(line 51)
+#없애기 (주석해제)
+(line 54)
+#없애기 (주석해제)
+(line 55)
+max_binlog_size=1000M
+(엔터)
+expire_logs_days=14
+esc :wq
+systemctl restart mariadb
+
+[cos-c]
+vi /etc/my.cnf
+:set nu
+(line 48)
+server-id = 2
+(line 51)
+#없애기 (주석해제)
+(line 54)
+#없애기 (주석해제)
+(line 55)
+max_binlog_size=1000M
+(엔터)
+expire_logs_days=14
+esc :wq
+systemctl restart mariadb
+
+[cos]
+ip add
+(주소확인하기)
+mysql -uroot -p
+1111
+grant replication slave on *.* to slaveroot@(방금확인한주소 치기(192.168.2.102)) identified by '1234';
+flush privileges;
+show master status;
+(File 이름, position 기억하기)
+
+[cos-c]
+mysql -uroot -p
+1111
+change master to master_host='(아까 확인한 주소(192.168.2.102)', master_user='slaveroot', master_password='1234', master_port=3306, master_log_file='(위에 File 이름(mysql-bin.000001)', master_log_pos=(위에 position(473));
+flush privileges;
+show slave status\G;
+
+stop slave;
+
+[cos]
+show master status;
+(file이름, position 기억)
+create database MasterDB;
+
+[cos-c]
+change master to master_host='(master IP(192.168.2.102)', master_user='slaveroot', master_password='1234', master_port=3306, master_log_file='(위에 File 이름(mysql-bin.000001)', master_log_pos=(위에 position(473));
+flush privileges;
+start slave;
+show slave status\G;
+
