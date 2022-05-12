@@ -1,0 +1,26 @@
+
+public class Ex {
+
+	public static void main(String[] args) {
+
+		System.out.println("Person 인스턴스 생성 전");
+		
+		Person p = new Person();
+		
+		
+	}
+
+}
+
+class Person {
+	
+	String name;
+	int age;
+	
+	public Person() {
+		
+		System.out.println("생성자 Person 호출됨!");
+		
+	}
+	
+}

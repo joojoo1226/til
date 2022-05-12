@@ -1,0 +1,46 @@
+
+public class Test_2 {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}
+
+
+class Account {
+	
+	String accountNo;
+	String ownerName;
+	int balance;
+	
+	public Account() {
+		
+		accountNo = "111-1111-111";
+		ownerName = "홍길동";
+		balance = 0;
+		
+	}
+	
+	public Account(String newAccountNo) {
+		
+		accountNo = newAccountNo;
+		ownerName = "홍길동";
+		balance = 0;
+		
+	}
+	
+	public Account(String newAccountNo, String newOwnerName) {
+		
+		balance = 0;
+		
+	}
+	
+	public Account(String newAccountNo, String newOwnerName, int newBalance) {
+		
+		balance = 0;
+		
+	}
+}

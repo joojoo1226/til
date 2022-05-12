@@ -1,0 +1,24 @@
+
+public class Ex {
+
+	public static void main(String[] args) {
+
+		Person p = new Person();
+		
+	}
+
+}
+
+
+class Person {
+	
+	String nation;
+	String name;
+	String jumin;
+
+	public Person() {
+		System.out.println("Person() 생성자 호출됨!");
+	}
+	
+	
+}

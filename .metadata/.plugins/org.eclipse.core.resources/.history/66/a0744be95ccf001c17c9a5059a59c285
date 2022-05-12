@@ -1,0 +1,29 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Account acc = new Account();
+		
+		System.out.println(acc.accountNo + "\n" + acc.ownerName + "\n" + acc.balance);
+		
+	}
+
+}
+
+class Account {
+	
+	String accountNo;
+	String ownerName;
+	int balance;
+	
+	public Account() {
+		
+		accountNo = "111-1111-111";
+		ownerName = "홍길동";
+		balance = 10000;
+		
+	}
+	
+	
+}

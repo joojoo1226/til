@@ -1,0 +1,24 @@
+
+public class Ex {
+
+	public static void main(String[] args) {
+
+		
+	}
+
+}
+
+
+class Person {
+	
+	String name;
+	int age;
+	
+}
+
+class Person2 {
+	
+	private String name;
+	private int age;
+	
+}

@@ -1,0 +1,18 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		
+	
+	}
+
+}
+
+
+class Account2 {
+	
+	private String accountNo;
+	private String ownerName;
+	private int balance;
+}

@@ -1,0 +1,19 @@
+
+public class Test2 {
+
+	public static void main(String[] args) {
+
+		int min = 0;
+		int sec = 0;
+		
+		while(min <= 59) {
+			min++;
+			while(sec <= 59) {
+				System.out.println(min + "분 " + sec + "초");
+				sec++;
+			}
+		}
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+	
+		
+		
+	}
+	
+}
+
+class Person2 {
+	
+	String nation;
+	String name;
+	int age;
+	
+	public Person2(String newName, int newAge) {
+		
+		System.out.println("Person2(String, int) 생성자 호출됨!");
+		
+	}
+	
+}

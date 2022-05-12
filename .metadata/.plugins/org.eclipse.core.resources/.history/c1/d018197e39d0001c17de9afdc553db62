@@ -1,0 +1,22 @@
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+
+		PrintClass pc = new PrintClass();
+		
+		pc.print();
+		
+	}
+
+}
+
+
+class PrintClass {
+	
+	public void print() {
+		System.out.println("print() 메서드 호출됨!");
+		System.out.println("초대 멤버 : 없음 없음 없음");
+	}
+	
+}

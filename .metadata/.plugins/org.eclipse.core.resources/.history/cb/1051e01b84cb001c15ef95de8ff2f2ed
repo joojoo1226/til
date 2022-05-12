@@ -1,0 +1,48 @@
+
+public class Test {
+
+	public static void main(String[] args) {
+
+		Account2 acc = new Account2();
+		
+		
+	
+	}
+
+}
+
+
+class Account2 {
+	
+	private String accountNo;
+	private String ownerName;
+	private int balance;
+	
+	
+	public String getAccountNo() {
+		return accountNo;
+	}
+	
+	public void setAccountNo(String accountNo) {
+		this.accountNo = accountNo;
+	}
+	
+	public String getOwnerName() {
+		return ownerName;
+	}
+	
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
+	}
+	
+	public int getBalance() {
+		return balance;
+	}
+	
+	public void setBalance(int balance) {
+		this.balance = balance;
+	}
+	
+	
+	
+}

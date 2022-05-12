@@ -1,0 +1,22 @@
+
+public class Ex2 {
+
+	public static void main(String[] args) {
+	
+		
+		
+	}
+	
+}
+
+class Person2 {
+	
+	String nation;
+	String name;
+	int age;
+	
+	public Person2(String newName, int newAge) {
+		
+	}
+	
+}

@@ -1,0 +1,27 @@
+//overloading
+
+public class Ex3 {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}
+
+class NormalMethod {
+	
+	public void add(int num1, int num2) {
+		
+		System.out.println(num1 + num2);
+		
+	}
+	
+	public void addDouble(double num1, double num2) {
+		
+		System.out.println(num1 + num2);
+		
+	}
+	
+}

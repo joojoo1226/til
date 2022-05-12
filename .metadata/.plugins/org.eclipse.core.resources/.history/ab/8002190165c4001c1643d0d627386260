@@ -1,0 +1,13 @@
+
+public class Ex3 {
+
+	public static void main(String[] args) {
+		
+		int startNum = 1;
+		int endNum = 10;
+		
+		for (int i = startNum; i <= endNum; i++) {
+			System.out.println(i);
+		}
+	}
+}
