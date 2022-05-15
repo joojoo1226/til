@@ -1,0 +1,74 @@
+﻿<html>
+ <head> 
+  <title>iframe으로 페이지 내에 다른 내용 넣기</title>
+ </head>
+ <body>
+ <hr>
+<h1>iframe으로 페이지 내에 다른 내용 넣기</h1>
+<p>
+ &lt;iframe src="**" width="n" height="n"&gt; &lt;/iframe&gt; <br>
+ src속성으로 안에 보여질 내용의 경로를 지정하고 <br>
+ width/height속성으로 iframe의 가로/세로 크기를 지정.
+</p>
+<iframe>iframe미지원 브라우저 사용자용 메세지</iframe>
+
+<hr>
+<h2>- iframe안에 보여줄 수 있는 종류(링크와 일치) - </h2>
+
+<h3>1. 절대 경로(URL)로 iframe안에 보여주기</h3>
+ <iframe src="http://www.itwillbs.co.kr/"></iframe>
+
+<h3>2. 상대 경로로 *.html/*.htm (웹페이지) iframe안에 보여주기</h3>
+ <iframe src="test06.html"> </iframe>
+ <iframe src="test04.html"> </iframe>
+
+<h3>3. 상대 경로로 *.jpg/*.gif/*.png/...(이미지 파일) iframe안에 보여주기</h3>
+ <iframe src="img/cat.jpg"  width="640" height="426"> </iframe>
+
+
+<h3>4. 상대 경로로 *.mp4/*.webm/*.ogg/...(동영상 파일) iframe안에 보여주기</h3>
+ <iframe src="blossom.mp4" width="400" height="300"> </iframe>
+
+<h3>5. 상대 경로로 *.txt (텍스트 파일) iframe안에 보여주기</h3>
+ <iframe src="무료이미지주소.txt"> </iframe>
+
+<hr>
+<h2>- iframe안에  링크 열어 주기 - </h2>
+<p>&lt;iframe <b>name="abc"</b>&gt; ---- 서로 일치 <br>
+   &lt;a href="*" <b>target="abc"</b>&gt; --- 시킴
+</p>
+ <nav>
+  <a href="test01.html" target="ifbox01">test01.html</a>
+  <a href="test02.html" target="ifbox01">test02.html</a>
+  <a href="test03.html" target="ifbox01">test03.html</a>
+  <a href="test04.html" target="ifbox01">test04.html</a>
+  <a href="test05.html" target="ifbox01">test05.html</a>
+  <a href="test06.html" target="ifbox01">test06.html</a>
+  <a href="test07.html" target="ifbox01">test07.html</a>
+ </nav> <br><br>
+ <iframe src="test01.html" width="800" height="400" name="ifbox01">
+ </iframe>
+
+
+
+
+ </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
