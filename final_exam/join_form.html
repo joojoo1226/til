@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>join_form</title>
+<script type="text/javascript">
+	function check_id() {
+		location.href = "check_id.html";
+	}
+</script>
+</head>
+<body>
+	<h1>회원가입</h1>
+	<br>
+	<form action="">
+		<table border="1">
+			<tr>
+				<td>이름</td>
+				<td>
+					<input id="name" type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>ID</td>
+				<td>
+					<input type="text" value="4~8글자 사이 입력">
+					<input type="button" value="ID 중복확인" onclick="check_id()">
+				</td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td>
+					<input id="passwd" type="text" value="8~16글자 사이 입력">
+				</td>
+			</tr>
+			<tr>
+				<td>비밀번호 확인</td>
+				<td>
+					<input id="checkPasswd" type="text">
+				</td>
+			</tr>
+			<tr>
+				<td>주민번호</td>
+				<td>
+					<input type="text" maxlength="6">
+					-
+					<input type="text" maxlength="7">
+				</td>
+			</tr>
+			<tr>
+				<td>E-Mail</td>
+				<td>
+					<input type="text">
+					@
+					<input type="text">
+					<select>
+						<option value="">직접입력</option>
+						<option>naver.com</option>
+						<option>hanmail.net</option>
+						<option>kakao.com</option>
+						<option>google.com</option>
+						<option>nate.com</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>직업</td>
+				<td>
+					<select>
+						<option>항목을 선택하세요</option>
+						<option>건물주</option>
+						<option>구직자</option>
+						<option>강사님❤️</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>성별</td>
+				<td>
+					<input id="gender_male" type="radio" name="gender"> 남성
+					<input id="gender_female" type="radio" name="gender"> 여성
+				</td>
+			</tr>
+			<tr>
+				<td>취미</td>
+				<td>
+					<input type="checkbox"> 여행
+					<input type="checkbox"> 독서
+					<input type="checkbox"> 게임
+					<input type="checkbox"> 전체선택
+				</td>
+			</tr>
+			<tr>
+				<td>가입동기</td>
+				<td>
+					<textarea rows="10" cols="35"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="button" value="가입">
+					<input type="button" value="초기화">
+					<input type="button" value="돌아가기" onclick="window.back()">
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
