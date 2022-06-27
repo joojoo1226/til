@@ -30,7 +30,7 @@ String sId = (String)session.getAttribute("sId");
 				<%
 				if(sId.equals("admin1")) {
 				%>
-					<a href="member_management.jsp">회원관리</a>
+					<a href="member/member_management.jsp">회원관리</a>
 				<%	
 				}
 				%>
