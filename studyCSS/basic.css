@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+ul {
+	list-style: circle;
+	line-height: 1.8;
+	margin-bottom: 20px;
+}
+
+li {
+	margin-bottom: 10px;
+}
+

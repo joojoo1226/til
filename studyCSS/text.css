@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+.bg01 {
+	background-color: lightgray;
+}
+
+
+.ta01 {
+	text-align: left;
+}
+
+.ta02 {
+	text-align: center;
+}
+
+.ta03 {
+	text-align: right;
+}
+
+.ta04 {
+	text-align: justify;
+}
+
+.td01 {
+	text-decoration: overline;
+}
+
+.td02 {
+	text-decoration: line-through;
+}
+
+.td03 {
+	text-decoration: underline;
+}
+
+.td04 {
+	text-decoration: none;
+}
+
+.td04:hover {
+	text-decoration: underline;
+}

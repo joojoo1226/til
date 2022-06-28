@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+h1 {
+	border-left: 12px solid;
+	background-color: lightblue;
+	padding: 0.3em;
+	color : blue;
+}
+
+section>h2 {
+	
+}
+
+section {
+	border: 3px solid #39d;
+	margin: 3em 1em;
+	padding: 1em;
+}
+
+section {
+	font-size: 12px;
+}
+
+.fs01 {
+	font-size: 16px;
+}
+
+.fs02 {
+	font-size: 12px;
+}
+
+.fs03 {
+	font-size: 20px;
+}
+
+.fs04 {
+	font-size: 1em;
+}
+
+.fs05 {
+	font-size: 0.75em;
+}
+
+.fs06 {
+	font-size: 1.25em;
+}
+
+.fs07 {
+	font-size: 1rem;
+}
+
+.fs08 {
+	font-size: 0.75rem;
+}
+
+.fs09 {
+	font-size: 1.25rem;
+}
+
+.fw01 {
+	font-weight: 100;
+}
+
+.fw02 {
+	font-weight: 200;
+}
+
+.fw03 {
+	font-weight: 300;
+}
+
+.fw04 {
+	font-weight: 400;
+}
+
+.fw05 {
+	font-weight: 500;
+}
+
+.fw06 {
+	font-weight: 600;
+}
+
+.fw07 {
+	font-weight: 700;
+}
+
+.fw08 {
+	font-weight: 800;
+}
+
+.fw09 {
+	font-weight: 900;
+}
+
+.fw10 {
+	font-weight: bold;
+}
+
+.fw11 {
+	font-size: 12px;
+	font-weight: normal;
+	color: gray;
+}
+
+.fwn {
+	font-weight: normal;
+}
+
+.fst01 {
+	font-style: italic;
+}
+
+.fst02 {
+	font-style: oblique;
+}
+
+.fst03 {
+	font-style: normal;
+}
+
+.fst03:hover {
+	font-style: italic;
+}
+
+.ff01 {
+	font-family: "Georgia", "Garamond", serif;	
+}
+
+.ff02 {
+	font-family: "Verdana", "Helvetica", "Arial", sans-serif;
+}
+
+.ff03 {
+	font-family: "Lucida Console", "Monaco", monospace;
+}
