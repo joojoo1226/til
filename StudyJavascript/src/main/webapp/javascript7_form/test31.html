@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form태그 안의 selectbox</title>
+<script type="text/javascript">
+	function info() {
+// 		alert(document.fr.fruits2.options[0].value + "\n" + 
+// 				document.fr.fruits2.options[0].selected + "\n" + 
+// 				document.fr.fruits2.options[0].text + "\n");
+
+		if(document.fr.fruits2.options[0].selected) {
+			alert("과일 선택 필수!");
+			document.fr.fruits2.focus();
+		} else {
+			alert("과일 선택됨");
+		}
+	}
+	
+	function itemSelect() {
+// 		alert("과목 변경");
+		
+		if(document.fr.subject.options[0].selected) {
+			alert("과목 선택 필수!");
+			document.fr.selectedSubject.value = "";
+		} else {
+			document.fr.selectedSubject.value = document.fr.subject.value;
+		}
+	}
+	
+	function check() {
+		if(document.fr.subject.value == "") {
+			alert("과목 선택 필수!");
+			document.fr.subject.focus();
+			return false;
+		} 
+	}
+	
+</script>
+</head>
+<body>
+	<h1>test31.html</h1>
+	
+	<form action="b.jsp" method="get" name="fr" onsubmit="return check()">
+		<select name="fruits">
+			<option value="apple">사과</option>
+			<option value="banana">바나나</option>
+			<option value="lemon">레몬</option>
+		</select>
+		
+		<select name="fruits2">
+			<option value="">과일을 선택하세요</option>
+			<option value="apple">사과</option>
+			<option value="banana">바나나</option>
+			<option value="lemon">레몬</option>
+		</select>
+		
+		<select name="fruits3" size="2">
+			<option value="apple">사과</option>
+			<option value="banana">바나나</option>
+			<option value="lemon">레몬</option>
+		</select>
+		
+		<select name="fruits4">
+			<option value="">과일을 선택하세요</option>
+			<option value="apple">사과</option>
+			<option value="banana" disabled="disabled">바나나</option>
+			<option value="lemon">레몬</option>
+		</select>
+		<br>
+		
+		<input type="button" value="확인" onclick="info()">
+		
+		<hr>
+		
+		<select name="subject" onchange="itemSelect()">
+			<option value="">수강할 과목을 선택하세요</option>
+			<option value="java">Java</option>
+			<option value="jsp">JSP</option>
+			<option value="oracle">Oracle</option>
+		</select>
+		<input type="text" name="selectedSubject">
+		
+		<hr>
+		
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function getMessage() {
+		
+		alert("getMessage() 함수 호출됨");
+
+		return "리턴값";
+		
+	}
+	
+// 	getMessage();
+
+// 	var resultValue = getMessage();
+// 	alert(resultValue);
+	
+// 	var value = "리턴값";
+// 	alert(value);
+	
+// 	alert("리턴값");
+
+// 	alert(getMessage());
+
+	function sum() {
+		
+		let total = 0;
+		
+		for(let i=0; i<=10; i++) {
+			
+			total = total + i;
+			
+		}
+		
+// 		alert(total);
+		return total;
+		
+	}
+	
+// 	sum();
+	
+// 	let resultNum = sum();
+// 	alert(resultNum);
+
+	function sumX(x) {
+		let total = 0;
+		for(let i=1; i<=x; i++) {
+			total += i;
+		}
+		return total;
+	}
+	
+// 	let resultNum2 = sumX(100);
+// 	alert(resultNum2);
+
+// 	function login(id, pass) {
+		
+// 		if(id == "admin") {
+// 			if(pass == "1234") {
+// 				return "로그인 성공";
+// 			} else {
+// 				return "패스워드 틀림";
+// 			}
+// 		} else {
+// 			return "아이디존재x";
+// 		}
+// 	}
+
+	function login(id, pass) {
+		
+		let result = "";
+		
+		if(id == "admin") {
+			if(pass == "1234") {
+				result = "로그인 성공";
+			} else {
+				result = "패스워드 틀림";
+			}
+		} else {
+			result = "아이디존재x";
+		}
+		
+		return result;
+	}
+	
+	let resultlogin = login("admin", "1234");
+	alert(resultlogin);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

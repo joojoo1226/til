@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function func1() {
+		alert(location.href);
+	}
+	
+	function func2() {
+// 		location.href="https://www.naver.com";
+		location.href="test22.html";
+	}
+	
+	function func3() {
+		location.reload();
+	}
+	
+	function func4(a) {
+// 		if(a == "cart") {
+// 			location.href = "cart_page.html";
+// 		} else if (a == "order") {
+// 			location.href = "order_page.html";
+// 		}
+
+		location.href = a + "_page.html";
+	}
+</script>
+</head>
+<body>
+	<h1>test21.html</h1>
+	<input type="button" value="주소 정보 출력" onclick="func1()">
+	<input type="button" value="주소 정보 변경" onclick="func2()">
+	<input type="button" value="주소 새로 고침" onclick="func3()"><br>
+	<input type="text">
+	
+	<hr>
+	
+	<input type="button" value="장바구니 이동" onclick="func4('cart')">
+	<input type="button" value="즉시구매" onclick="func4('order')">
+</body>
+</html>

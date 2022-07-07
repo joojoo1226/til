@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tag에 id값</title>
+<script type="text/javascript">
+	function func1() {
+// 		alert("func1() 호출");
+		let header1 = document.getElementById("header-1");
+		let header2 = document.getElementById("header-2");
+		
+		header1.innerHTML = "getElementById() 에 의한 변경";
+		header2.innerHTML = "뿌꾸뿌꾸";
+	}
+	
+	function func2() {
+		let header = document.getElementById("header");
+		
+		header.innerHTML = "onload 이벤트에 의한 변경";
+	}
+</script>
+</head>
+<body onload="func2()">
+	<h1 id="header">test25.html</h1>
+	<h1 id="header-1">Header-1</h1>
+	<h1 id="header-2">Header-2</h1>
+	<input type="button" value="Header 값 변경" onclick="func1()">
+</body>
+</html>
+
+<!-- document.getElementById() - 내가 원하는 태그 가져오기 -->

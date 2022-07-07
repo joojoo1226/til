@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>img 다루기_mouse</title>
+<script type="text/javascript">
+
+	function func1() {
+// 		alert(document.images[0].src);
+		
+// 		for (let i=0; i<=document.images.length; i++) {
+// 			alert(document.images[i].src);
+// 		}
+		
+		alert(document.img1.src);
+	}
+	
+	function func2() {
+		document.img1.width = 400;
+		document.img1.height = 550;
+		document.img1.border = 10;
+		document.img1.src = "2.jpg";
+	}
+	
+	function func3() {
+// 		document.images[1].src = "4.jpg";
+		document.img2.src = "4.jpg";
+	}
+	
+	function func4(jpgNum) {
+		document.img3.src = jpgNum;
+	}
+	
+</script>
+</head>
+<body>
+	<h1>펭-하</h1>
+	
+	<img src="1.jpg" width="200" height="200" border="2" title="펭-하" alt="펭수없음" name="img1"><br>
+	<input type="button" value="이미지속성정보출력" onclick="func1()">
+	<input type="button" value="이미지속성정보변경" onclick="func2()"><br>
+	<img src="2.jpg" width="200" height="200" onclick="func3()" name="img2"><br>
+	<img src="3.jpg" width="200" height="200" name="img3" onmouseover="func4('5.jpg')" onmouseleave="func4('3.jpg')"><br>
+	
+</body>
+</html>

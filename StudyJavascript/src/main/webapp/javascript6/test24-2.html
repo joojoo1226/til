@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window.onload()</title>
+<script type="text/javascript">
+// 	window.onload = function() {
+// 		alert("작업 - 1");
+// 	}
+
+	function func1() {
+		alert("작업 - 1");
+		
+		alert("document.body : " + document.body);
+		
+		document.body.style.background == "skyblue";
+	}
+</script>
+</head>
+<body onload="func1()">
+	<h1>test24.html</h1>
+	
+	<h3>작업 - 2</h3>
+	<script type="text/javascript">
+		alert("작업 - 2");
+	</script>
+	
+	<h3>작업 - 3</h3>
+	<script type="text/javascript">
+		alert("작업 - 3");
+	</script>
+</body>
+</html>
+
+<!-- window.onload() - 문서 내의 body 태그 내의 모든 내용이 로딩된 후 이벤트 발생 -->

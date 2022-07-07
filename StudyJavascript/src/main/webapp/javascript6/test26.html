@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ID</title>
+<script type="text/javascript">
+
+	function checkId() {
+		let idElement = document.getElementById("id");
+		
+// 		alert(idElement);
+
+		let id = idElement.value;
+		let idResult = document.getElementById("idResult");
+		
+// 		alert(id);
+		
+		if(id == "admin") {
+// 			alert("이미 존재하는 아이디");
+			idResult.innerHTML = "이미 존재하는 아이디";
+			idResult.style.color = "RED";
+		} else {
+// 			alert("사용 가능한 아이디");
+			idResult.innerHTML = "사용 가능한 아이디";
+			idResult.style.color = "lightgreen";
+		}
+		
+	}
+	
+	function checkYear() {
+		let year = document.getElementById("year").value;
+		let birthResult = document.getElementById("birthResult");
+		
+		if (!(1900 <= year && year <= 2050)){
+			birthResult.innerHTML = "연도가 올바르지 않습니다.";
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<h1>test26.html</h1>
+	
+	<table>
+		<tr>
+			<th align="left">아이디</th>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" size="30" id="id" onchange="checkId()">
+				<br>
+				<span id="idResult"></span>
+			</td>
+		</tr>
+		<tr>
+			<th align="left">생년월일</th>
+		</tr>
+		<tr>
+			<td>
+				<input type="text" size="5" id="year" maxlength="4" placeholder="년(4자)" onchange="checkYear()">
+				<input type="text" size="5" id="month" onchange="checkMonth()">
+				<input type="text" size="5" id="day" onchange="checkDay()">
+				<br>
+				<span id="birthResult"></span>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+

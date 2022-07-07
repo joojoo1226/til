@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	let fruits = ["apple", "strawberry", "orange"];
+	
+	document.write(fruits[0] + "<br>");
+	document.write(fruits[1] + "<br>");
+	document.write(fruits[2] + "<br>");
+	
+	document.write("<hr>");
+
+	for (let i=0; i<=2; i++) {
+		document.write(fruits[i] + "<br>");
+	}
+
+	document.write("<hr>");
+
+	let nums = [10, 20, 30, 40, 50];
+	
+	for (let i=0; i<=4; i++) {
+		document.write(nums[i] + "<br>");
+	}
+	
+	nums[5] = 60;
+	for (let i=0; i<=5; i++) {
+		document.write(nums[i] + "<br>");
+	}
+	
+	document.write("<hr>");
+	
+	nums[6] = 70;
+	nums[7] = 80;
+	
+	for (let i=0; i<nums.length; i++) {
+		document.write(nums[i] + "<br>");
+	}
+	
+// 	for (let i=0; i<fruits.length; i++) {
+// 		document.write(fruits[i] + "<br>");
+// 	}
+	
+	document.write("<hr>");
+
+	for (let i=0; i<fruits.length; i++) {
+		let fruit = fruits[i];
+		
+		document.write(fruit + "<br>");
+	}
+	
+	for(let fruit of fruits) {
+		document.write(fruit + "<br>");
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

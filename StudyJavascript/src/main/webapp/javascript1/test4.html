@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prompt</title>
+<script>
+
+	/*
+	입력되는 데이터를 활용하는 방법
+	1) 변수에 저장하는 방법
+	2) 출력문에 직접 함수를 사용하는 방법
+	*/
+	
+	/*
+	prompt()
+	- 입력창(dia)통해 사용자로부터 데이터 입력 가능
+	- 입력된 데이터(값)가 리턴되므로 결과값을 저장할 변수 필요
+	- 입력되는 모든 값은 데이터와 무관하게 문자(string) 타입
+	*/
+	/*
+	prompt("다이얼로그에 표시할 메시지", "기본값");
+	- 기본값을 입력할 경우 사용자가 데이터 입력할 위치에 기본값으로 지정된 값 표시
+	*/
+	
+	//1
+	var name = prompt("이름을 입력하세요");
+	alert("입력 데이터 : " + name);
+	alert("입력 데이터의 타입 : " + typeof(name));
+	
+	//2
+	alert("입력 데이터 : " + prompt("이름을 입력하세요"));
+	
+	//prompt("다이얼로그에 표시할 메시지", "기본값");
+	alert("입력 데이터 : " + prompt("이름을 입력하세요", "이름 없음"));
+	
+	var isExit = confirm("종료하시겠습니까?");
+	alert(isExit);
+	
+</script>
+</head>
+<body>
+	<h1>test4.html</h1>
+
+</body>
+</html>

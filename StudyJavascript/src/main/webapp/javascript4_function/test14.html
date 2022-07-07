@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function showMessage(text) {
+		alert("함수에 전달된 값 : " + text + ", 데이터타입 : " + typeof(text));
+	}
+	
+// 	showMessage("안녕하세요");
+// 	showMessage(500);
+// 	showMessage();
+	
+	//변수 디폴트 설정
+// 	function showMessage2(text = "전달받은 데이터 없음") {
+// 		alert("함수에 전달된 값 : " + text + ", 데이터타입 : " + typeof(text));
+// 	}
+
+// 	showMessage2(500);
+// 	showMessage2();
+
+	function showMessage2(text) {
+		if (text == undefined) {
+			text = "전달받은 데이터 없음";
+		}
+		alert("함수에 전달된 값 : " + text + ", 데이터타입 : " + typeof(text));
+	}
+
+// 	showMessage2();
+
+	
+
+	function sum(x) {
+		
+		let total = 0;
+				
+		for(let i = 1; i <= x; i++) {
+			total += i;
+			
+		}
+		document.write("최댓값 : " + sum + "<br>");
+		document.write("total : " + total);
+	
+	}
+	
+// 	sum(100);
+	
+</script>
+
+
+<script src="test14.js"></script>
+<script type="text/javascript">
+// 	checkNumGame2(10);
+
+// 	let passwd = prompt();
+// 	checkPassword(passwd);
+
+	login("admin", "1234");
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	/*
+	자바스크립트에서의 변수 선언 방법
+	- var, let, const 중 하나를 사용하여 변수 생성(선언)
+	- 저장되는 데이터에 따라 데이터타입이 자동으로 결정됨
+	- var을 사용하여 변수 선언 시 중복되는 변수를 선언해도 오류가 없음
+	  let을 사용할 경우 변수 중복 선언 불가 (const 도 동일함)
+	- var을 사용할 경우 변수 선언문보다 먼저 변수를 사용해도 접근 가능하나
+	  let을 사용할 경우 변수 선언문보다 먼저 변수 사용이 불가능
+	- var 과 let 사용할 경우 변수 값 변경이 가능하지만 
+	  const 사용 시 변수 값 변경이 불가능(=상수로 취급됨)
+	*/
+	
+	var num1 = 10; 
+//	alert(num1);
+	
+	num1 = 3.14;
+// 	alert(num1);
+
+	var name = "홍길동";
+	//var 사용하여 기존에 선언된 name 변수와 동일한 이름으로 다시 선언해도 오류가 없으며 기존 값을 덮어씀
+	var name = "이순신";
+// 	alert(name);
+	
+	let name2 = "홍길동";
+// 	alert(name2);
+
+	//let 사용하여 기존에 선언된 name2 변수와 동일한 이름으로 다시 선언해도 오류가 없으며 기존 값을 덮어씀
+// 	let name2 = "이순신";
+// 	alert(name2);
+	
+	//단, let로 선언된 변수도 기존 값 변경은 가능함(=재할당 가능)
+	name2 = "이순신";
+// 	alert(name2);
+	
+	/*
+	var, let vs const 차이점
+	- var 또는 let를 사용한 변수 선언 시 값 변경 가능
+	- const를 사용한 변수 선언 시 상수로 취급되며, 값 변경이 불가능
+	*/
+	
+	let num2 = 30;
+	num2 = 100;
+// 	alert(num2);
+	
+	const num3 = 30;
+// 	num3 = 100;
+	alert(num3);
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

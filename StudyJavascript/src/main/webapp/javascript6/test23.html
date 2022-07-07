@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Document 객체 기초</title>
+<script type="text/javascript">
+	
+	function func1() {  //쓸 일 별로 없음
+		alert(document.title);
+	}
+	
+	function func2() {
+		document.title = "제목 변경";
+	}
+	
+	function func3() {  //쓸 일 별로 없음
+		alert("backgroundColor : " + document.bgColor + " , foregroundColor : " + document.fgColor);
+	}
+	
+	function func4() {
+		document.bgColor = "skyblue";
+// 		document.bgColor = "#00FFFF";
+		document.fgColor = "purple";
+	}
+	
+	function func5(color) {
+		alert(color);
+		document.bgColor = color;
+	}
+</script>
+</head>
+<body>
+
+	<h1>test23.html</h1>
+	<input type="button" value="문서 제목 출력" onclick="func1()">
+	<input type="button" value="문서 제목 변경" onclick="func2()">
+	<input type="button" value="문서 배경색 출력" onclick="func3()">
+	<input type="button" value="문서 색상 변경" onclick="func4()">
+	
+	<hr>
+	
+	<input type="radio" value="cyan" name="bgcolor" onclick="func5('cyan')">Cyan
+	<input type="radio" value="magenta" name="bgcolor" onclick="func5('magenta')">Magenta
+	<input type="radio" value="gray" name="bgcolor" onclick="func5('gray')">Gray
+</body>
+</html>

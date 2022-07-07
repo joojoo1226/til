@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>형변환</title>
+<script type="text/javascript">
+	
+	var value = 1;
+	
+	document.write(value + " : " + typeof(value) + "<br>");
+	
+	value = String(value);
+	
+	document.write(value + " : " + typeof(value) + "<br>");
+	
+	value = true;
+	
+	document.write(value + " : " + typeof(value) + "<br>");
+	
+	value = String(value);
+	
+	document.write(value + " : " + typeof(value) + "<br>");
+
+	document.write("<hr>");
+	
+	var strNum1 = "1234", strNum2 = "99";
+	
+	document.write(strNum1 + " : " + typeof(strNum1) + "<br>");
+// 	alert(strNum1 - strNum2);
+
+	strNum1 = Number(strNum1);
+
+	document.write(strNum1 + " : " + typeof(strNum1) + "<br>");
+
+	document.write(Number("              1234             ") + "<br>");
+	document.write(Number("1234a") + "<br>");
+	document.write(Number(true) + "<br>");
+	document.write(Number(false) + "<br>");
+	
+	document.write("<hr>");
+	
+// 	비어있다고 여겨지는 데이터만 false
+	document.write(Boolean("true") + "<br>");
+	document.write(Boolean("false") + "<br>");
+	document.write(Boolean(1) + "<br>");
+	document.write(Boolean(0) + "<br>");
+	document.write(Boolean(NaN) + "<br>");
+	document.write(Boolean(null) + "<br>");
+	document.write(Boolean("") + "<br>");
+	document.write(Boolean("1") + "<br>");
+	document.write(Boolean("0") + "<br>");
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

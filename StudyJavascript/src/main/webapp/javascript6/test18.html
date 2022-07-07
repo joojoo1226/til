@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var person = {
+		name : "SongjooPark",
+		gender : "female",
+		age : 26
+	}
+	
+// 	alert("name : " + person.name);
+// 	alert("gender : " + person.gender);
+// 	alert("age : " + person.age);
+	
+	person.age = 24;
+// 	alert("age : " + person.age);
+	
+	person.phone = "010-5245-8398";
+// 	alert("phone : " + person.phone);
+	
+	alert("phone" in person);
+	
+	delete person.phone;
+	alert("phone" in person);
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

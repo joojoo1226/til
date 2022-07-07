@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document 진행 순서</title>
+<script type="text/javascript">
+	alert("작업 - 1");
+	
+	alert("document.body : " + document.body);
+	
+	document.body.style.background == "skyblue";  //body 객체 로딩 전이라 실행 X
+	
+</script>
+</head>
+<body>
+	<h1>test24.html</h1>
+	
+	<h3>작업 - 2</h3>
+	<script type="text/javascript">
+		alert("작업 - 2");
+	</script>
+	
+	<h3>작업 - 3</h3>
+	<script type="text/javascript">
+		alert("작업 - 3");
+	</script>
+</body>
+</html>
+
+<!-- document.body - document의 body 태그 객체를 자동으로 저장 및 관리 -->

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form태그 속성값</title>
+<script type="text/javascript">
+	function printId() {
+		alert(document.fr.id.type + "\n" + document.fr.id.name + "\n" + document.fr.id.value);
+	}
+	
+	function printPasswd() {
+		alert(document.fr.passwd.type + "\n" + document.fr.passwd.name + "\n" + document.fr.passwd.value);
+	}
+	
+	function printTextarea() {
+		alert(document.fr.ta.type + "\n" + document.fr.ta.name + "\n" + document.fr.ta.value);
+	}
+	
+	function check() {
+// 		if(document.fr.id.value == "") {
+// 			alert("아이디를 입력하세요!");
+// 			document.fr.id.focus();
+// 		} else if(document.fr.passwd.value == "") {
+// 			alert("패스워드를 입력하세요!");
+// 			document.fr.passwd.focus();
+// 		} else if(document.fr.ta.value == 0) {
+// 			alert("자기소개를 입력하세요!");
+// 			document.fr.ta.focus();
+// 		} else {
+// 			document.fr.submit();
+// 		}
+		
+		if(document.fr.id.value.length == 0) {
+			alert("아이디를 입력하세요!");
+			document.fr.id.focus();
+			return;
+		} else if(document.fr.passwd.value.length == 0) {
+			alert("패스워드를 입력하세요!");
+			document.fr.passwd.focus();
+			return;
+		} else if(document.fr.ta.value.length == 0) {
+			alert("자기소개를 입력하세요!");
+			document.fr.ta.focus();
+			return;
+		} else {
+			document.fr.submit();
+			return;
+		}
+	}
+	
+	function check2() {
+		if(document.fr.id.value.length == 0) {
+			alert("아이디를 입력하세요!");
+			document.fr.id.focus();
+			return false;
+		} else if(document.fr.passwd.value.length == 0) {
+			alert("패스워드를 입력하세요!");
+			document.fr.passwd.focus();
+			return false;
+		} else if(document.fr.ta.value.length == 0) {
+			alert("자기소개를 입력하세요!");
+			document.fr.ta.focus();
+			return false;
+		} 
+	}
+</script>
+</head>
+<body>
+	<h1>test29.html</h1>
+	
+	<form action="b.jsp" method="get" name="fr" onsubmit="return check2()">
+		<input type="text" name="id" placeholder="아이디">
+		<input type="button" value="focus" onclick="document.fr.id.focus()">
+		<input type="button" value="blur" onclick="document.fr.id.blur()">
+		<input type="button" value="select" onclick="document.fr.id.select()">
+		<br>
+		
+		<input type="password" name="passwd" placeholder="패스워드">
+		<br>
+		
+		<textarea rows="5" cols="10" name="ta"></textarea>
+		<input type="button" value="아이디 출력" onclick="printId()">
+		<input type="button" value="패스워드 출력" onclick="printPasswd()">
+		<input type="button" value="Textarea 출력" onclick="printTextarea()">
+		<input type="button" value="입력값 체크" onclick="check()">
+		<br>
+		
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

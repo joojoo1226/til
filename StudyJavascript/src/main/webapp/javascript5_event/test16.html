@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function btnClick3() {
+		alert("button3 click");
+	}
+	
+	function btnClick4() {
+		alert("button4 click");
+	}
+	
+	function btnClick5(btn5) {
+		alert(btn5 + " 클릭됨");
+	}
+	
+	function go() {
+		let url = prompt("이동할 페이지 URL 입력");
+		alert(url);
+		
+		location.href = url;
+	}
+	
+</script>
+</head>
+<body>
+	
+	<h1>javascript/test16.html</h1>
+	
+	<input type="button" value="버튼1" onclick="alert('자바스크립트함수')">
+	<input type="button" value="버튼2" onclick="alert('button2 클릭됨')">
+	
+	<hr>
+
+	<input type="button" value="버튼3" onclick="btnClick3()">
+	<input type="button" value="버튼4" onclick="btnClick4()">
+	
+	<hr>
+
+	<input type="button" value="버튼5" onclick="btnClick5('버튼5')">
+	<input type="button" value="버튼6" onclick="btnClick5('버튼6')">
+	
+	<hr>
+	
+	<input type="button" value="더블버튼6" ondblclick="alert('버튼6 더블클릭됨')">
+	<input type="button" value="버튼7" onmouseover="alert('버튼7 mouseover')">
+	<input type="button" value="버튼8" onmouseout="alert('버튼8 mouseout')">
+	
+	<input type="button" value="버튼9" onmouseover="alert('버튼9 mouseover')" onmouseout="alert('버튼9 mouseout')">
+	
+	<hr>
+	
+	<a href="http://www.itwillbs.co.kr">아이티윌 부산교육센터</a><br>
+	<a href="https://www.naver.com/">naver</a>
+	<a href="https://www.naver.com/"><input type="button" value="naver"></a><br>
+	<a href="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fwww.naver.com">
+		<input type="button" value="naver login" style="color: white; background-color: #33aa00;">
+	</a><br>
+	
+	<hr>
+	<input type="button" value="itwill_busan" onclick="location.href='http://www.itwillbs.co.kr'">
+	<input type="button" value="naver" onclick="location.href='https://www.naver.com'">
+			
+	<input type="button" value="페이지 이동" onclick="go()">
+
+	
+</body>
+</html>

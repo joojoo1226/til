@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function showWindowInfo() {
+		alert("창 높이 : " + innerHeight + ", 창 너비 : " + innerWidth);
+	}
+	
+	function closeWindow() {
+		window.close();
+	}
+	
+	function changeBackgroundColor() {
+		document.body.style.background = "#e8d9ff";
+	}
+	
+	function showBrowserInfo() {
+		alert("브라우저 정보 : " + navigator.userAgent);
+		alert("브라우저 OS 정보 : " + navigator.platform);
+	}
+
+</script>
+</head>
+<body>
+	<input type="button" value="창 크기 확인" onclick="showWindowInfo()">
+	<input type="button" value="창 닫기" onclick="closeWindow()">
+	<input type="button" value="배경색 변경" onclick="changeBackgroundColor()" >
+	<input type="button" value="브라우저 정보 확인" onclick="showBrowserInfo()">
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function func1() {
+		open("http://www.itwillbs.co.kr", "창 이름", "width=300, height=300");
+	}
+	
+	function func2() {
+		let url = prompt("접속할 주소를 입력하세욥");
+		open(url, "창 이름", "width=600, height=600");
+	}
+	
+	function func3() {
+		close();
+	}
+	
+	function func4() {
+		open("test20_1.html", "창 이름", "width=600, height=600");
+	}
+
+</script>
+</head>
+<body>
+	<h1>test20.html</h1>
+	<input type="button" value="창 열기1" onclick="func1()">
+	<input type="button" value="창 열기2" onclick="func2()">
+	<input type="button" value="창 닫기" onclick="func3()" >
+	<input type="button" value="test20-1.html 창 열기" onclick="func4()">
+	
+</body>
+</html>

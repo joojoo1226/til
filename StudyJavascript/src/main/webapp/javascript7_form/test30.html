@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>checkbox/radio button 속성 다루기</title>
+<script type="text/javascript">
+
+	function checkAll() {
+		if(document.fr.check_all.checked) {
+// 			document.fr.hobby[0].checked = true;
+// 			document.fr.hobby[1].checked = true;
+// 			document.fr.hobby[2].checked = true;
+			
+			for(let item of document.fr.hobby) {
+				item.checked = true;
+			}
+			
+			document.getElementById("checkAll").innerHTML = "전체해제";
+			
+		} else {
+			document.fr.hobby[0].checked = false;
+			document.fr.hobby[1].checked = false;
+			document.fr.hobby[2].checked = false;
+			
+			document.getElementById("checkAll").innerHTML = "전체선택";
+		}
+	}
+	
+	function printCheckbox() {
+// 		alert(document.fr.hobby[0].value + " : " + document.fr.hobby[0].checked);
+		
+		if(!document.fr.hobby[0].checked && !document.fr.hobby[1].checked && !document.fr.hobby[2].checked) {
+			alert("취미를 최소 한 개 이상 선택하세요!");
+			return;
+		}
+	}
+	
+	function printRadio() {
+		if(!document.fr.gender[0].checked && !document.fr.gender[1].checked) {
+			alert("성별을 선택하세요");
+			return;
+		}
+	}
+</script>
+</head>
+<body>
+	<h1>test30.html</h1>
+	
+	<form action="b.jsp" method="get" name="fr">
+		취미 :
+		<input type="checkbox" name="hobby" value="게임">게임
+		<input type="checkbox" name="hobby" value="독서">독서
+		<input type="checkbox" name="hobby" value="등산">등산
+		<input type="checkbox" name="check_all" value="전체선택" onclick="checkAll()">
+		<span id="checkAll">전체선택</span>
+		<br>
+		
+		<input type="button" value="체크박스선택완료" onclick="printCheckbox()">
+		<hr>
+		
+		성별 :
+		<input type="radio" name="gender" value="남" required="required">남
+		<input type="radio" name="gender" value="여" required="required">여
+		<br>
+		
+		<input type="button" value="라디오버튼선택완료" onclick="printRadio()">
+		<hr>
+		
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

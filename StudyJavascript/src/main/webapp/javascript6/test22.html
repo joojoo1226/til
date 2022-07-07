@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function func1() {
+		alert(history.length);
+	}
+	
+	function func2() {
+		history.back(); // = history.go(-1)
+	}
+	
+	function func3() {
+		history.forward(); // = history.go(1)
+	}
+</script>
+</head>
+<body>
+
+	<h1>test22.html</h1>
+	<input type="button" value="방문기록 갯수 확인" onclick="func1()">
+	<input type="button" value="이전 페이지" onclick="func2()">
+	<input type="button" value="다음 페이지" onclick="func3()">
+	
+	<input type="button" value="2단계 이전 페이지" onclick="history.go(-2)">
+	<input type="button" value="2단계 다음 페이지" onclick="history.go(-2)">
+</body>
+</html>
